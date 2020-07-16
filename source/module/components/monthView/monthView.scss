@@ -1,0 +1,66 @@
+.month-view {
+  width: 250px;
+  max-width: 100%;
+  margin-bottom: 18px;
+
+  &__header {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  &__header-title {
+    text-transform: capitalize;
+  }
+
+  &__header-day,
+  &__calendar-day {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__calendar-day {
+    border-radius: 50%;
+
+    &:hover {
+      background: #f7f7f8;
+    }
+
+    &--selected {
+      background: #0277bd;
+      color: #fff;
+
+      &:hover {
+        background: #0277bd;
+      }
+    }
+
+    &--is-now {
+      background: #ffeb3b !important;
+      color: #212121 !important;
+
+      &:hover {
+        background: #ffeb3b !important;
+      }
+    }
+  }
+
+  &__month-arrow-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    path {
+      &:last-of-type {
+        fill: #70757a;
+      }
+    }
+
+    &:hover {
+      path {
+        &:last-of-type {
+          fill: #000;
+        }
+      }
+    }
+  }
+}

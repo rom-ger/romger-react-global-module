@@ -1,0 +1,148 @@
+.rg-tabs {
+  width: 100%;
+  position: relative;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+
+    &--full {
+      align-items: flex-start;
+      max-height: 200px;
+      overflow-x: auto;
+      overflow-y: auto;
+      overscroll-behavior-y: none;
+      -webkit-overflow-scrolling: touch;
+
+      /* total width */
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: #1d2a3a;
+      }
+
+      /* background of the scrollbar except button or resizer */
+      &::-webkit-scrollbar-track {
+        background-color: #f9f9fb;
+      }
+
+      &::-webkit-scrollbar-track:hover {
+        background-color: #f9f9fb;
+      }
+
+      /* scrollbar itself */
+      &::-webkit-scrollbar-thumb {
+        border: 0;
+        border-radius: 16px;
+        background-color: #a7adb6;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        border: 0;
+        background-color: #a7adb6;
+      }
+
+      /* set button(top and bottom of the scrollbar) */
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+    }
+  }
+
+  &__header-item {
+    flex-shrink: 0;
+    padding: 10px 8px;
+    border-bottom: 2px solid #fff;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 2px solid #1e61b8;
+    }
+
+    &--active {
+      border-bottom: 2px solid #1e61b8;
+      font-weight: 600;
+    }
+  }
+
+  &__body {
+    padding: 6px 0;
+  }
+
+  &__items-wrap {
+    display: flex;
+    position: relative;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 300ms;
+
+    &--full {
+      left: 0 !important;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__header-arrow {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 41px;
+    opacity: 0.54;
+    background: rgba(#000, 0.54);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &--right {
+      right: 0;
+      left: inherit;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--full {
+      display: none;
+    }
+  }
+
+  &__show-full-block {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    width: 21px;
+    height: 15px;
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px;
+    background: #a7adb6;
+    text-align: center;
+    cursor: pointer;
+
+    svg {
+      position: relative;
+      top: -5px;
+      left: -2px;
+      width: 16px;
+      height: 22px;
+      color: #fff;
+    }
+
+    &--full {
+      top: 200px;
+    }
+  }
+}

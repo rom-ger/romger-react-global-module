@@ -1,0 +1,18 @@
+.bread-crumbs {
+  width: 100%;
+  padding-top: 30px;
+  color: #767f8d;
+  font-size: 14px;
+
+  &__slash {
+    margin: 0 3px;
+  }
+
+  &__title {
+    cursor: pointer;
+
+    &--disabled {
+      cursor: default;
+    }
+  }
+}
