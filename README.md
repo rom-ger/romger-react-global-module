@@ -1,0 +1,1 @@
+# romger-react-global-module
